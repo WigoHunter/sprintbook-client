@@ -116,34 +116,19 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Mutation"], {
         mutation: CREATE_SPRINT_MUTATION,
         variables: this.state,
-        update: function update(cache, _ref) {
-          var data = _ref.data;
-
-          var _cache$readQuery = cache.readQuery({
-            query: _pages_index__WEBPACK_IMPORTED_MODULE_6__["ALL_SPRINT_QUERY"]
-          }),
-              sprints = _cache$readQuery.sprints;
-
-          cache.writeQuery({
-            query: _pages_index__WEBPACK_IMPORTED_MODULE_6__["ALL_SPRINT_QUERY"],
-            data: {
-              sprints: sprints.concat([data.createSprint])
-            }
-          });
-        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 52
         },
         __self: this
-      }, function (createSprint, _ref2) {
-        var loading = _ref2.loading,
-            error = _ref2.error;
+      }, function (createSprint, _ref) {
+        var loading = _ref.loading,
+            error = _ref.error;
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
           onSubmit:
           /*#__PURE__*/
           function () {
-            var _ref3 = _asyncToGenerator(
+            var _ref2 = _asyncToGenerator(
             /*#__PURE__*/
             _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
               var res;
@@ -181,24 +166,24 @@ function (_React$Component) {
             }));
 
             return function (_x) {
-              return _ref3.apply(this, arguments);
+              return _ref2.apply(this, arguments);
             };
           }(),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 57
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 83
+            lineNumber: 74
           },
           __self: this
         }, "Create a Sprint"), error && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84
+            lineNumber: 75
           },
           __self: this
         }, "Oops... There's an error."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", {
@@ -206,14 +191,14 @@ function (_React$Component) {
           "aria-busy": loading,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 85
+            lineNumber: 76
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "title",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 86
+            lineNumber: 77
           },
           __self: this
         }, "Title", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -226,14 +211,14 @@ function (_React$Component) {
           required: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 88
+            lineNumber: 79
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "title",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99
+            lineNumber: 90
           },
           __self: this
         }, "Description", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
@@ -245,14 +230,14 @@ function (_React$Component) {
           required: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 101
+            lineNumber: 92
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
           type: "submit",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 111
+            lineNumber: 102
           },
           __self: this
         }, "Submit")));

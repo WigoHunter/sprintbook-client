@@ -52,15 +52,6 @@ class CreateSprint extends React.Component {
 			<Mutation
 				mutation={CREATE_SPRINT_MUTATION}
 				variables={this.state}
-				update={(cache, { data }) => {
-					const { sprints } = cache.readQuery({ query: ALL_SPRINT_QUERY });
-					cache.writeQuery({
-						query: ALL_SPRINT_QUERY,
-						data: {
-							sprints: sprints.concat([data.createSprint])
-						}
-					})
-				}}
 			>
 				{(createSprint, { loading, error }) => (
 					<Form onSubmit={async e => {
