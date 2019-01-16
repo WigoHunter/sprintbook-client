@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -210,19 +210,34 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Mutation"], {
         mutation: CREATE_SPRINT_MUTATION,
         variables: this.state,
+        update: function update(cache, _ref) {
+          var data = _ref.data;
+
+          var _cache$readQuery = cache.readQuery({
+            query: _pages_index__WEBPACK_IMPORTED_MODULE_6__["ALL_SPRINT_QUERY"]
+          }),
+              sprints = _cache$readQuery.sprints;
+
+          cache.writeQuery({
+            query: _pages_index__WEBPACK_IMPORTED_MODULE_6__["ALL_SPRINT_QUERY"],
+            data: {
+              sprints: sprints.concat([data.createSprint])
+            }
+          });
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 52
         },
         __self: this
-      }, function (createSprint, _ref) {
-        var loading = _ref.loading,
-            error = _ref.error;
+      }, function (createSprint, _ref2) {
+        var loading = _ref2.loading,
+            error = _ref2.error;
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
           onSubmit:
           /*#__PURE__*/
           function () {
-            var _ref2 = _asyncToGenerator(
+            var _ref3 = _asyncToGenerator(
             /*#__PURE__*/
             _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
               var res;
@@ -260,24 +275,24 @@ function (_React$Component) {
             }));
 
             return function (_x) {
-              return _ref2.apply(this, arguments);
+              return _ref3.apply(this, arguments);
             };
           }(),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 66
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74
+            lineNumber: 83
           },
           __self: this
         }, "Create a Sprint"), error && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 75
+            lineNumber: 84
           },
           __self: this
         }, "Oops... There's an error."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", {
@@ -285,14 +300,14 @@ function (_React$Component) {
           "aria-busy": loading,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 76
+            lineNumber: 85
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "title",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 77
+            lineNumber: 86
           },
           __self: this
         }, "Title", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -305,14 +320,14 @@ function (_React$Component) {
           required: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 79
+            lineNumber: 88
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "title",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 90
+            lineNumber: 99
           },
           __self: this
         }, "Description", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
@@ -324,14 +339,14 @@ function (_React$Component) {
           required: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92
+            lineNumber: 101
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
           type: "submit",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 102
+            lineNumber: 111
           },
           __self: this
         }, "Submit")));
@@ -434,13 +449,12 @@ var Home = function Home(props) {
         lineNumber: 25
       },
       __self: this
-    }, "Oops... There's an error.");
-    console.log(data); // <RenderSprints sprint={data.sprint} />
+    }, "Oops... There's an error."); // <RenderSprints sprint={data.sprint} />
 
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 28
       },
       __self: this
     }, data.sprints.map(function (s) {
@@ -449,7 +463,7 @@ var Home = function Home(props) {
           key: s.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 31
           },
           __self: this
         }, s.title)
@@ -515,7 +529,7 @@ var Try = function Try(props) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!****************************!*\
   !*** multi ./pages/try.js ***!
   \****************************/

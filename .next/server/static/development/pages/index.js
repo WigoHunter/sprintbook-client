@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -181,13 +181,12 @@ var Home = function Home(props) {
         lineNumber: 25
       },
       __self: this
-    }, "Oops... There's an error.");
-    console.log(data); // <RenderSprints sprint={data.sprint} />
+    }, "Oops... There's an error."); // <RenderSprints sprint={data.sprint} />
 
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 28
       },
       __self: this
     }, data.sprints.map(function (s) {
@@ -196,7 +195,7 @@ var Home = function Home(props) {
           key: s.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 31
           },
           __self: this
         }, s.title)
@@ -210,7 +209,7 @@ var Home = function Home(props) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

@@ -11,11 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/try": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/try": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

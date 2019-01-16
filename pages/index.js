@@ -23,7 +23,6 @@ const Home = props => (
 			{({ data, error, loading }) => {
 				if (loading) return <p>Loading...</p>
 				if (error) return <p>Oops... There's an error.</p>
-				console.log(data);
 				// <RenderSprints sprint={data.sprint} />
 				return (
 					<ul>
