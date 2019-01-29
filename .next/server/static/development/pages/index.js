@@ -88,10 +88,50 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/RenderSprints.js":
+/*!*************************************!*\
+  !*** ./components/RenderSprints.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/wigohunter/wigo/frontend/components/RenderSprints.js";
+
+
+var RenderSprints = function RenderSprints(_ref) {
+  var sprints = _ref.sprints;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, sprints.map(function (sprint) {
+    return (// TODO: Build Sprint component
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        key: sprint.id,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        },
+        __self: this
+      }, sprint.title)
+    );
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (RenderSprints);
+
+/***/ }),
 
 /***/ "./pages/index.js":
 /*!************************!*\
@@ -111,6 +151,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_RenderSprints__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/RenderSprints */ "./components/RenderSprints.js");
 var _jsxFileName = "/Users/wigohunter/wigo/frontend/pages/index.js";
 
 function _templateObject() {
@@ -129,39 +170,40 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var ALL_SPRINT_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default()(_templateObject());
 
 var Home = function Home(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/try",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, "Try")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 22
     },
     __self: this
   }, "Hey!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Query"], {
     query: ALL_SPRINT_QUERY,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 23
     },
     __self: this
   }, function (_ref) {
@@ -171,36 +213,25 @@ var Home = function Home(props) {
     if (loading) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 25
       },
       __self: this
     }, "Loading...");
     if (error) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 26
       },
       __self: this
-    }, "Oops... There's an error."); // <RenderSprints sprint={data.sprint} />
-
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    }, "Oops... There's an error.");
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_RenderSprints__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      sprints: data.sprints,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 27
       },
       __self: this
-    }, data.sprints.map(function (s) {
-      return (// TODO: Build Sprint component
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: s.id,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 31
-          },
-          __self: this
-        }, s.title)
-      );
-    }));
+    });
   }));
 };
 
@@ -209,7 +240,7 @@ var Home = function Home(props) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

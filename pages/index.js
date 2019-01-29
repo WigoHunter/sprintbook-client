@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
+import RenderSprints from '../components/RenderSprints';
 
 const ALL_SPRINT_QUERY = gql`
 	query ALL_SPRINT_QUERY {
@@ -23,15 +24,7 @@ const Home = props => (
 			{({ data, error, loading }) => {
 				if (loading) return <p>Loading...</p>
 				if (error) return <p>Oops... There's an error.</p>
-				// <RenderSprints sprint={data.sprint} />
-				return (
-					<ul>
-						{data.sprints.map(s => (
-							// TODO: Build Sprint component
-							<li key={s.id}>{s.title}</li>
-						))}
-					</ul>
-				)
+				return <RenderSprints sprints={data.sprints} />
 			}}
 		</Query>
 	</div>

@@ -47,6 +47,25 @@ class CreateSprint extends React.Component {
 		});
 	}
 
+	submitForm = async (e, createSprint) => {
+		e.preventDefault();
+
+		const res = await createSprint();
+		this.setState({
+			title: '',
+			description: ''
+		});
+
+		/*
+			Router.push({
+				pathname: '/',
+				query: {
+					id: something
+				}
+			})
+		*/
+	}
+
 	render() {
 		return (
 			<Mutation
@@ -63,23 +82,8 @@ class CreateSprint extends React.Component {
 				}}
 			>
 				{(createSprint, { loading, error }) => (
-					<Form onSubmit={async e => {
-						e.preventDefault();
-						const res = await createSprint();
-						this.setState({
-							title: '',
-							description: '',
-						});
-
-						/*
-						Router.push({
-							pathname: '/',
-							query: {
-								id: something
-							}
-						})
-						*/
-					}}>
+					// TEST: on plane - refactored this part into `submitForm`
+					<Form onSubmit={e => this.submitForm(e, createSprint)}>
 						<h2>Create a Sprint</h2>
 						{error && <p>Oops... There's an error.</p>}
 						<fieldset disabled={loading} aria-busy={loading}>

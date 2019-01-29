@@ -201,7 +201,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n\thtml {\n\t\tbox-sizing: border-box;\n\t}\n\n\t*, *:bofore, *:after {\n\t\tbox-sizing: inherit;\n\t}\n\n\tbody {\n\t\tpadding: 0;\n\t\tmargin: 0;\n\t}\n"]);
+  var data = _taggedTemplateLiteral(["\n\thtml {\n\t\tbox-sizing: border-box;\n\t}\n\n\t*, *:bofore, *:after {\n\t\tbox-sizing: inherit;\n\t}\n\n\tbody {\n\t\tpadding: 0;\n\t\tmargin: 0;\n\t\tfont-family: \"Chinese Quote\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"Helvetica Neue\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n\t\tfont-size: 14px;\n\t\tfont-variant: tabular-nums;\n\t\tline-height: 1.5;\n\t\tcolor: rgba(0, 0, 0, 0.65);\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -260,19 +260,19 @@ function (_React$Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 51
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 52
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Meta__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 53
         },
         __self: this
       }), this.props.children));
@@ -476,11 +476,9 @@ function (_App) {
         }, _callee, this);
       }));
 
-      function getInitialProps(_x) {
+      return function getInitialProps(_x) {
         return _getInitialProps.apply(this, arguments);
-      }
-
-      return getInitialProps;
+      };
     }()
   }]);
 
