@@ -8,7 +8,8 @@ import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { Button, Welcome } from '@storybook/react/demo';
 
 import Sprint from '../components/Sprint';
-import "antd/dist/antd.css"
+import "antd/dist/antd.css";
+import "./background.css";
 
 /*
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);

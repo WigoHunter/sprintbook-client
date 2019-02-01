@@ -19,6 +19,7 @@ Router.onRouteChangeError = () => {
 
 const theme = {
 	white: '#FFF',
+	red: '#EF618A',
 };
 
 injectGlobal`
